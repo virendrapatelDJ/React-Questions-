@@ -7,6 +7,7 @@ import { UseEffectSequence } from './hooks/UseEffectSequence';
 import { SearchingEmployee } from './optimize/SearchingEmployee';
 import { ReducerExample } from './hooks/ReducerExample';
 import { ReduceRenders } from './hooks/ReduceRenders';
+import { ClassComponent } from './ClassComponent';
 
 export default function App(props) {
   return (
@@ -19,6 +20,7 @@ export default function App(props) {
       {/* <SearchingEmployee /> */}
       {/* <ReducerExample /> */}
       {/* <ReduceRenders /> */}
+      <ClassComponent />
     </div>
   );
 }
