@@ -9,7 +9,7 @@ import { ReducerExample } from './hooks/ReducerExample';
 import { ReduceRenders } from './hooks/ReduceRenders';
 import { ClassComponent } from './ClassComponent';
 
-export default function App(props) {
+export default function App() {
   return (
     <div>
       {/* <h1>Hello React 🤩</h1> */}
@@ -20,7 +20,7 @@ export default function App(props) {
       {/* <SearchingEmployee /> */}
       {/* <ReducerExample /> */}
       {/* <ReduceRenders /> */}
-      <ClassComponent />
+      <ClassComponent name="virendra" key2="value" />
     </div>
   );
 }
