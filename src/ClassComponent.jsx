@@ -5,26 +5,32 @@ import React from 'react';
 export class ClassComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      employees: [],
+      loading: true,
+    };
     this.removeAllEmployees = this.removeAllEmployees.bind(this);
     this.fetchEmployees = this.fetchEmployees.bind(this);
   }
 
   removeAllEmployees() {
     this.setState({
-      ...this.state,
       employees: [],
     });
   }
 
   fetchEmployees() {
     const _this = this;
+    _this.setState({
+      loading: true,
+    });
     fetch('./employees.json')
       .then((response) => response.json())
       .then((data) => data.objects)
       .then((data) => {
         _this.setState({
-          ..._this.state,
           employees: data,
+          loading: false,
         });
       });
   }
@@ -39,16 +45,26 @@ export class ClassComponent extends React.Component {
       <div>
         <h3>Class Component</h3>
         <hr />
-        <button className="btn btn-danger" onClick={this.fetchEmployees}>
-          Fetch Employees
+        <button
+          className="btn btn-sm btn-success"
+          onClick={this.fetchEmployees}
+        >
+          Fetch Employees 🥳
         </button>
         &nbsp;
-        <button className="btn btn-danger" onClick={this.removeAllEmployees}>
-          Remove All
+        <button
+          className="btn btn-sm btn-danger"
+          onClick={this.removeAllEmployees}
+        >
+          Remove All 😞
         </button>
         <hr />
         <p>Props :{JSON.stringify(this.props, null, 2)}</p>
-        <p>State :{JSON.stringify(this.state?.employees, null, 2)}</p>
+        {this.state.loading ? (
+          'Loading ⌛️'
+        ) : (
+          <p>State :{JSON.stringify(this.state?.employees, null, 2)}</p>
+        )}
       </div>
     );
   }
