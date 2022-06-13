@@ -8,7 +8,6 @@ import { SearchingEmployee } from './optimize/SearchingEmployee';
 import { ReducerExample } from './hooks/ReducerExample';
 import { ReduceRenders } from './hooks/ReduceRenders';
 import { ClassComponent } from './ClassComponent';
-import { Calculator } from './context/Calculator';
 
 export default function App() {
   return (
