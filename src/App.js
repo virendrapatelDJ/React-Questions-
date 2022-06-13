@@ -8,11 +8,12 @@ import { SearchingEmployee } from './optimize/SearchingEmployee';
 import { ReducerExample } from './hooks/ReducerExample';
 import { ReduceRenders } from './hooks/ReduceRenders';
 import { ClassComponent } from './ClassComponent';
+import { Calculator } from './context/Calculator';
 
 export default function App() {
   return (
     <div>
-      {/* <h1>Hello React 🤩</h1> */}
+      <h5 className="border rounded text-center mt-4">React is Awesome 🤩🤩</h5>
       {/* <UseEffectExample /> */}
       {/* <UseEffectSequence /> */}
       {/* <StudentList /> */}
@@ -20,7 +21,8 @@ export default function App() {
       {/* <SearchingEmployee /> */}
       {/* <ReducerExample /> */}
       {/* <ReduceRenders /> */}
-      <ClassComponent name="virendra" key2="value" />
+      {/* <ClassComponent name="virendra" key2="value" /> */}
+      {/* <Calculator /> */}
     </div>
   );
 }
